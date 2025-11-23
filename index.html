@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TryInteract Quiz Embed</title>
+  <style>
+    body {
+        background-color: #060505;
+    }
+    /* Optional: Set the container size */
+    #interact-69226633bce5690015df017e {
+      width: 800px;
+      height: 800px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="interact-69226633bce5690015df017e"></div>
+  <script>
+    var app_69226633bce5690015df017e;
+    (function(d, t){
+      var s = d.createElement(t),
+          options = {
+            "appId": "69226633bce5690015df017e",
+            "width": "800",
+            "height": "800",
+            "async": true,
+            "host": "quiz.tryinteract.com",
+            "footer": "show"
+          };
+      s.src = 'https://i.tryinteract.com/embed/app.js';
+      s.onload = s.onreadystatechange = function(){
+        var rs = this.readyState;
+        if(rs) if(rs != 'complete') if(rs != 'loaded') return;
+        try {
+          app_69226633bce5690015df017e = new InteractApp();
+          app_69226633bce5690015df017e.initialize(options);
+          app_69226633bce5690015df017e.display();
+        } catch(e){}
+      };
+      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode;
+      par.insertBefore(s, scr);
+    })(document, 'script');
+  </script>
+</body>
+</html>
